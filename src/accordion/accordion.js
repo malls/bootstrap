@@ -73,7 +73,7 @@ angular.module('ui.bootstrap.accordion', ['ui.bootstrap.collapse'])
     },
     link: function(scope, element, attrs, accordionCtrl) {
 
-      //allow accordion-groups to be open by default
+      //allow accordion-groups to be open by default, e.g <accordion-group heading="Heading" open-by-default="true">This content will be shown by default.</accordion-group>
       if (attrs.openByDefault) {
         scope.isOpen = true;
       }
