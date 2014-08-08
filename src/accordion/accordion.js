@@ -72,6 +72,12 @@ angular.module('ui.bootstrap.accordion', ['ui.bootstrap.collapse'])
       };
     },
     link: function(scope, element, attrs, accordionCtrl) {
+
+      //allow accordion-groups to be open by default
+      if (attrs.openByDefault) {
+        scope.isOpen = true;
+      }
+
       accordionCtrl.addGroup(scope);
 
       scope.$watch('isOpen', function(value) {
